@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  height: 100vh;
+  width: 100vw;
+  background-color: #aaa;
+}
+
+.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+.board{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: .5em;
+  gap: 2em;
+}
+
+.result{
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: .5em;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.deck{
+  border: 2px solid black;
+  border-radius: 5%;
+  color: aliceblue;
+  font-size: 3.5rem;
+  padding: 1.5em .75em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.computer-deck{
+  background-color: green;
+}
+
+.player-deck{
+  background-color: blue;
+}
+
+.card-slot{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card{
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: aliceblue;
+  font-size: 3.5rem;
+  padding: 1.5em .9em;
+  user-select: none;
+  position: relative;
+}
+
+.red{
+  color: red;
+}
+
+.black{
+  color: #222;
+}
+
+.card::after,
+.card::before{
+  content: attr(data-value);
+  font-size: 1.5rem;
+  position: absolute;
+  letter-spacing: .1rem;
+}
+
+.card::before{
+  top: 5%;
+  left: 10%;
+}
+
+.card::after{
+  bottom: 5%;
+  right: 10%;
+  transform: rotate(180deg);
+}
